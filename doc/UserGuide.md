@@ -51,6 +51,7 @@ Examples:
 
 ### Listing all persons : `list`
 Shows a list of all persons in the address book.<br>
+The "list" function sorts the contacts by name and prints them in order.
 Format: `list`
 
 ### Finding all persons containing any keyword in their name: `find`
