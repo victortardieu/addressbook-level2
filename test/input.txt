@@ -155,3 +155,9 @@
   # exits properly
   exit
   list
+
+##########################################################
+# test list persons command
+##########################################################
+
+    # should list all the contacts in the address book in order. Names starting with A first and starting with Z last

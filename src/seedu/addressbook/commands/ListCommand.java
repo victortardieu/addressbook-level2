@@ -21,22 +21,20 @@ public class ListCommand extends Command {
     @Override
     public CommandResult execute() {
         List<ReadOnlyPerson> allPersons = addressBook.getAllPersons().immutableListView();
-        List<ReadOnlyPerson> sortPersons =  new ArrayList<ReadOnlyPerson>();
+        List<ReadOnlyPerson> sortedPersonList =  new ArrayList<ReadOnlyPerson>();
         for (int i = 0 ; i<allPersons.size() ; i++){
-            sortPersons.add(allPersons.get(i));
+            sortedPersonList.add(allPersons.get(i));
         }
-        int n = sortPersons.size();
-        for (int i = 0; i < n-1; i++)
-            for (int j = 0; j < n-i-1; j++)
-                if (sortPersons.get(j).getName().toString().toLowerCase().compareTo(sortPersons.get(j+1).getName()
-                        .toString().toLowerCase()) > 0)
-                {
-                    ReadOnlyPerson temp = sortPersons.get(j);
-                    sortPersons.set(j,sortPersons.get(j+1));
-                    sortPersons.set(j+1,temp);
+        int sizeSortedPersonList = sortedPersonList.size();
+        for (int i = 0; i < sizeSortedPersonList-1; i++)
+            for (int j = 0; j < sizeSortedPersonList-i-1; j++)
+                if (sortedPersonList.get(j).getName().toString().toLowerCase().compareTo(sortedPersonList.get(j+1).getName()
+                        .toString().toLowerCase()) > 0) {
+                    ReadOnlyPerson temp = sortedPersonList.get(j);
+                    sortedPersonList.set(j,sortedPersonList.get(j+1));
+                    sortedPersonList.set(j+1,temp);
                 }
-        return new CommandResult(getMessageForPersonListShownSummary(sortPersons), sortPersons);
+        return new CommandResult(getMessageForPersonListShownSummary(sortedPersonList), sortedPersonList);
     }
-
 
 }

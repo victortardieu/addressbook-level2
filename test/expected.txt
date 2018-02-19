@@ -135,6 +135,21 @@
 || 
 || 5 persons listed!
 || ===================================================
+|| Enter command: add Arthur John p/123456 e/a@s.com a/Paris t/family
+|| [Command entered:add Arthur John p/123456 e/a@s.com a/Paris t/family]
+|| New person added: Arthur John Phone: 123456 Email: a@s.com Address: Paris Tags: [family]
+|| ===================================================
+|| Enter command:
+|| [Command entered:  list]
+|| 	1. Adam Brown Phone: 111111 Email: adam@gmail.com Address: 111, alpha street Tags:
+||  2. Arthur John Phone: 123456 Email: a@s.com Address: Paris Tags: [family]
+|| 	3. Betsy Choo Tags: [secretive]
+|| 	4. Charlie Dickson Email: charlie.d@nus.edu.sg Address: 333, gamma street Tags: [school][friends]
+|| 	5. Dickson Ee Phone: 444444 Address: 444, delta street Tags: [friends]
+|| 	6. Esther Potato Phone: 555555 Email: esther@not.a.real.potato Tags: [tubers][starchy]
+||
+|| 6 persons listed!
+|| ===================================================
 || Enter command: || [Command entered:  add Esther Potato p/555555 e/esther@not.a.real.potato pa/555, epsilon street t/tubers t/starchy]
 || This person already exists in the address book
 || ===================================================
